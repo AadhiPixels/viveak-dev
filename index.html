@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Viveak Vadivelkarasan — Tech Lead</title>
+<meta name="description" content="Viveak Vadivelkarasan - Tech Lead for distributed systems and external API platforms. 8+ years shipping event-driven backend platforms, Kubernetes migrations and AI-accelerated engineering.">
+<meta property="og:title" content="Viveak Vadivelkarasan — Tech Lead">
+<meta property="og:description" content="Distributed systems, external API platforms, hard migrations done well. Press START.">
+<meta property="og:url" content="https://viveakv.dev">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕹️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HUD -->
+<div class="hud" id="hud">
+  <div class="hud-inner">
+    <button class="hud-avatar" id="avatar" title="Player" aria-label="Player avatar">VV</button>
+    <div class="hud-meta">
+      <div class="hud-name">VIVEAK <span class="blink">▌</span></div>
+      <div class="xpbar" title="Explore the page to earn XP">
+        <div class="xpbar-fill" id="xpFill"></div>
+      </div>
+    </div>
+    <div class="hud-level">LVL <span id="lvl">1</span></div>
+    <div class="hud-score">XP <span id="xp">0</span></div>
+    <nav class="hud-nav">
+      <a href="#stats">Stats</a>
+      <a href="#quests">Quests</a>
+      <a href="#boss">Boss&nbsp;Arena</a>
+      <a href="#trophies">Trophies</a>
+      <a href="#sidequests">Side&nbsp;Quests</a>
+      <a href="#hire">Hire</a>
+    </nav>
+  </div>
+</div>
+
+<!-- HERO / TITLE SCREEN -->
+<header class="hero" id="top">
+  <div class="scanlines" aria-hidden="true"></div>
+  <p class="hero-kicker">// PLAYER 1 HAS ENTERED THE GAME</p>
+  <h1 class="hero-name">VIVEAK<br>VADIVELKARASAN</h1>
+  <p class="hero-class">CLASS: <strong>TECH LEAD</strong> · SPEC: <strong>DISTRIBUTED SYSTEMS &amp; EXTERNAL API PLATFORMS</strong></p>
+  <p class="hero-blurb">
+    8+ years designing and shipping backend platforms that third parties build businesses on.
+    Currently leading a team of 9 engineers on an external API platform serving 5 major clients
+    and ~1M events/day. Design-first. AI-accelerated. Hard migrations done well.
+  </p>
+  <div class="hero-tags">
+    <span>📍 London, UK</span>
+    <span>⚔️ NestJS / TypeScript</span>
+    <span>☁️ AWS / Kubernetes</span>
+    <span>🤖 AI coding agents</span>
+  </div>
+  <div class="hero-cta">
+    <a class="btn btn-primary" href="#quests">▶ PRESS START</a>
+    <a class="btn" href="cv.pdf" download="Viveak-Vadivelkarasan-CV.pdf" id="cvBtn">⬇ DOWNLOAD CV</a>
+  </div>
+  <p class="hero-hint">hint: real gamers try the Konami code</p>
+</header>
+
+<main>
+
+<!-- STATS -->
+<section class="panel" id="stats">
+  <h2><span class="h2-icon">📊</span> CHARACTER STATS</h2>
+  <div class="stats-grid">
+    <div class="stat-group">
+      <h3>Backend &amp; APIs</h3>
+      <div class="stat"><span class="stat-name">NestJS / Node.js / TypeScript</span><div class="bar"><div class="bar-fill" style="--v:95%"></div></div></div>
+      <div class="stat"><span class="stat-name">Event-driven architecture &amp; webhooks</span><div class="bar"><div class="bar-fill" style="--v:94%"></div></div></div>
+      <div class="stat"><span class="stat-name">REST / OpenAPI / OAuth2 &amp; OIDC</span><div class="bar"><div class="bar-fill" style="--v:92%"></div></div></div>
+      <div class="stat"><span class="stat-name">Java / Python</span><div class="bar"><div class="bar-fill" style="--v:78%"></div></div></div>
+    </div>
+    <div class="stat-group">
+      <h3>Cloud &amp; Platform</h3>
+      <div class="stat"><span class="stat-name">AWS (EKS, ECS, Lambda, EventBridge, SQS)</span><div class="bar"><div class="bar-fill" style="--v:93%"></div></div></div>
+      <div class="stat"><span class="stat-name">Kubernetes / Docker / Terraform</span><div class="bar"><div class="bar-fill" style="--v:90%"></div></div></div>
+      <div class="stat"><span class="stat-name">Kafka / BullMQ / Redis / PostgreSQL</span><div class="bar"><div class="bar-fill" style="--v:89%"></div></div></div>
+      <div class="stat"><span class="stat-name">Observability (Datadog)</span><div class="bar"><div class="bar-fill" style="--v:88%"></div></div></div>
+    </div>
+    <div class="stat-group">
+      <h3>Special Abilities</h3>
+      <div class="stat"><span class="stat-name">AI-accelerated engineering &amp; agentic workflows</span><div class="bar"><div class="bar-fill gold" style="--v:96%"></div></div></div>
+      <div class="stat"><span class="stat-name">Architecture patterns (outbox, idempotency, circuit breakers)</span><div class="bar"><div class="bar-fill gold" style="--v:94%"></div></div></div>
+      <div class="stat"><span class="stat-name">Team leadership &amp; mentoring</span><div class="bar"><div class="bar-fill gold" style="--v:92%"></div></div></div>
+      <div class="stat"><span class="stat-name">Flutter / Firebase / Stripe (indie products)</span><div class="bar"><div class="bar-fill gold" style="--v:85%"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- QUEST LOG -->
+<section class="panel" id="quests">
+  <h2><span class="h2-icon">🗺️</span> QUEST LOG <span class="h2-sub">— main storyline</span></h2>
+
+  <div class="quest active">
+    <div class="quest-head">
+      <span class="quest-status">⚡ ACTIVE QUEST</span>
+      <h3>Tech Lead, External APIs — Collinson</h3>
+      <span class="quest-dates">Jul 2025 – Present · London</span>
+    </div>
+    <p>Leading a team of 9 engineers building the external API platform powering lounge reservations,
+    availability and prebooking - the integration surface for 5 major third-party clients, with more being onboarded.</p>
+    <ul>
+      <li>Designed and built an event-driven webhook delivery platform processing ~1M events/day on AWS EventBridge and BullMQ/Redis - HMAC-signed payloads, per-subscription circuit breakers, rate limiting, exponential-backoff retries and a Postgres-backed DLQ.</li>
+      <li>Re-platformed a high-volume data service from AWS Lambdas to EKS, removing timeout and cold-start constraints and adding observability and back-pressure handling.</li>
+      <li>Authored the push-to-pull integration strategy (operation-status endpoints with Retry-After / ETag semantics) and its four-phase rollout.</li>
+      <li>Own the shared authentication and authorisation tooling; set platform standards - outbox publishing, idempotent mutations, correlation-ID tracing.</li>
+      <li>Lead engineering practice, including team adoption of AI-assisted development and agentic workflows.</li>
+    </ul>
+  </div>
+
+  <div class="quest">
+    <div class="quest-head">
+      <span class="quest-status done">✔ COMPLETED</span>
+      <h3>Manager, Technology Consulting — Deloitte Digital</h3>
+      <span class="quest-dates">Jun 2018 – Jul 2025 · London</span>
+    </div>
+    <p class="quest-note">Promoted through Engineer → Senior Engineer → Lead → Manager. Selected missions:</p>
+    <ul>
+      <li><strong>Technical Lead, LEGO Customer Data Platform</strong> (2024–25) - Led Databricks CDP integration for LEGO.com and architected the AWS pipeline into Salesforce CRM; recovered a delayed initiative back onto schedule.</li>
+      <li><strong>Technical Lead, UK Government</strong> (2023–24) - Turned around an underperforming delivery team and introduced the client's first asynchronous service journey, securing follow-on engagement scope.</li>
+      <li><strong>Lead Engineer, LEGO SFMC Migration</strong> (2021–22) - Led four engineers migrating LEGO's communication channels to Salesforce Marketing Cloud with zero customer-visible disruption.</li>
+      <li><strong>Full-Stack Developer, LEGO</strong> (2020–21) - Shipped the AWS-driven automated self-returns system on LEGO.com, cutting customer-service contact volume by ~30%.</li>
+      <li><strong>Lead Engineer, Dyson</strong> (2019–20) - Led the EC2-to-Kubernetes migration for a 300+ engineer organisation - faster deploys, measurable cost reduction.</li>
+      <li><strong>Frontend Engineer, Dyson</strong> (2018–19) - Built reusable AEM components rolled out across Dyson's European e-commerce estate.</li>
+    </ul>
+  </div>
+
+  <div class="quest">
+    <div class="quest-head">
+      <span class="quest-status done">✔ COMPLETED</span>
+      <h3>Early Levels</h3>
+      <span class="quest-dates">2015 – 2018</span>
+    </div>
+    <ul>
+      <li><strong>Gentrack</strong> (2018) - Backend invoicing solutions in Java.</li>
+      <li><strong>Accenture</strong> (2017–18) - Drove HMRC's automated test coverage from ~25% to 75%+, converting a graduate offer into a permanent role.</li>
+      <li><strong>Tullett Prebon, intern</strong> (2016) - Built a market-data trading platform used by traders during the UK EU referendum.</li>
+      <li><strong>BSc (Hons) Computer Science</strong> - City, University of London (2017) · <strong>AWS Certified Solutions Architect</strong>.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- BOSS ARENA / WEBHOOK PLAYGROUND -->
+<section class="panel" id="boss">
+  <h2><span class="h2-icon">👾</span> BOSS ARENA <span class="h2-sub">— the webhook delivery simulator</span></h2>
+  <p class="section-lede">
+    This is a toy version of the platform I run in production: fire events at a flaky client and watch
+    circuit breakers, exponential-backoff retries and the dead-letter queue do their job.
+    Try knocking the client offline mid-stream.
+  </p>
+
+  <div class="sim">
+    <div class="sim-controls">
+      <button class="btn btn-primary" id="simFire">⚡ FIRE EVENT</button>
+      <button class="btn" id="simBurst">🌊 BURST ×10</button>
+      <button class="btn sim-toggle" id="simClientToggle" data-up="1">🟢 CLIENT: HEALTHY</button>
+      <button class="btn" id="simReplay" disabled>♻ REPLAY DLQ</button>
+    </div>
+
+    <div class="sim-stage" aria-hidden="true">
+      <div class="sim-node" id="nodeProducer"><span class="sim-node-icon">🏭</span>Producer</div>
+      <div class="sim-wire" id="wire1"></div>
+      <div class="sim-node" id="nodeBus"><span class="sim-node-icon">🚌</span>Event Bus</div>
+      <div class="sim-wire" id="wire2"></div>
+      <div class="sim-node" id="nodeQueue"><span class="sim-node-icon">📥</span>Queue<span class="sim-badge" id="queueDepth">0</span></div>
+      <div class="sim-wire" id="wire3">
+        <div class="sim-breaker" id="breaker" title="Circuit breaker">CB<br><span id="breakerState">CLOSED</span></div>
+      </div>
+      <div class="sim-node" id="nodeClient"><span class="sim-node-icon" id="clientIcon">🖥️</span>Client</div>
+    </div>
+
+    <div class="sim-readout">
+      <div class="sim-metric"><span class="sim-metric-n" id="mDelivered">0</span>delivered</div>
+      <div class="sim-metric"><span class="sim-metric-n" id="mRetries">0</span>retries</div>
+      <div class="sim-metric warn"><span class="sim-metric-n" id="mDlq">0</span>in DLQ</div>
+      <div class="sim-metric"><span class="sim-metric-n" id="mBreaker">CLOSED</span>breaker</div>
+    </div>
+
+    <div class="sim-log-wrap">
+      <div class="sim-log" id="simLog" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<!-- TROPHIES -->
+<section class="panel" id="trophies">
+  <h2><span class="h2-icon">🏆</span> TROPHY CABINET <span class="h2-sub">— legendary drops</span></h2>
+  <div class="trophy-grid">
+    <div class="trophy">
+      <div class="trophy-icon">📡</div>
+      <h3>Webhook Delivery Platform</h3>
+      <p>Built the event-driven delivery backbone for all external client integrations - ~1M events/day with signed payloads, circuit breakers, rate limiting, retries and DLQ.</p>
+      <span class="trophy-xp">+5000 XP</span>
+    </div>
+    <div class="trophy">
+      <div class="trophy-icon">⚙️</div>
+      <h3>Serverless → Kubernetes</h3>
+      <p>Re-architected a high-volume data service from AWS Lambdas into a long-running service on EKS - no cold starts, no timeout ceilings, fully observable and resumable.</p>
+      <span class="trophy-xp">+4500 XP</span>
+    </div>
+    <div class="trophy">
+      <div class="trophy-icon">🤖</div>
+      <h3>AI-Accelerated Team</h3>
+      <p>Led team-wide adoption of AI coding agents and agentic workflows across design, delivery and code review - more throughput, same standards.</p>
+      <span class="trophy-xp">+4000 XP</span>
+    </div>
+    <div class="trophy">
+      <div class="trophy-icon">📦</div>
+      <h3>Self-Returns Automation</h3>
+      <p>Shipped an AWS-driven automated returns journey for a global e-commerce brand, cutting customer-service contact volume by ~30%.</p>
+      <span class="trophy-xp">+3500 XP</span>
+    </div>
+    <div class="trophy">
+      <div class="trophy-icon">🚢</div>
+      <h3>EC2 → Kubernetes at Scale</h3>
+      <p>Led containerisation for a 300+ engineer organisation - faster deploys and measurable AWS cost reduction.</p>
+      <span class="trophy-xp">+3500 XP</span>
+    </div>
+    <div class="trophy locked" id="secretTrophy">
+      <div class="trophy-icon">🔒</div>
+      <h3>???</h3>
+      <p>Secret trophy. Keep exploring…</p>
+      <span class="trophy-xp">+???</span>
+    </div>
+  </div>
+</section>
+
+<!-- SIDE QUESTS -->
+<section class="panel" id="sidequests">
+  <h2><span class="h2-icon">🌙</span> SIDE QUESTS <span class="h2-sub">— AadhiPixels, indie product studio (founder)</span></h2>
+  <p class="section-lede">After hours I run an indie product studio and ship my own products end-to-end -
+  design, build, deploy, operate. Real users, real payments, real on-call (it's me).</p>
+
+  <div class="sq-grid">
+    <a class="sq live" href="https://thecococard.com" target="_blank" rel="noopener">
+      <span class="sq-status">● LIVE</span>
+      <h3>🥥 TheCocoCard</h3>
+      <p>Digital loyalty platform for local businesses - business back-office, consumer PWA, staff till flow,
+      Flutter app, two Firebase backends and a cross-app Playwright E2E suite. Vercel + Firebase.</p>
+      <span class="sq-tags">Next.js · PWA · Flutter · Firebase · Playwright</span>
+    </a>
+    <a class="sq live" href="https://thethirdcoconut.com" target="_blank" rel="noopener">
+      <span class="sq-status">● LIVE</span>
+      <h3>🌴 TheThirdCoconut</h3>
+      <p>Brand and marketing site for the Coco estate - built on Next.js 16, shipped and operated solo.</p>
+      <span class="sq-tags">Next.js 16 · Vercel</span>
+    </a>
+    <a class="sq live" href="https://fixabee.com" target="_blank" rel="noopener">
+      <span class="sq-status">● LIVE</span>
+      <h3>🐝 Fixabee</h3>
+      <p>Local-services marketplace - bookings, provider onboarding with Stripe Connect payouts,
+      postcode-based discovery, referral programme, admin console, full dev/test/prod environments.</p>
+      <span class="sq-tags">Flutter · Firebase · Stripe Connect</span>
+    </a>
+    <div class="sq">
+      <span class="sq-status build">◐ IN THE LAB</span>
+      <h3>📦 TakeMineFree</h3>
+      <p>Give-it-away-locally app - app, backend and web, for rehoming things instead of binning them.</p>
+      <span class="sq-tags">Flutter · Firebase</span>
+    </div>
+    <div class="sq">
+      <span class="sq-status build">◐ IN THE LAB</span>
+      <h3>🏠 BuyMyPostcode</h3>
+      <p>Postcode-first property prototype - full-stack build with separate frontend and backend services.</p>
+      <span class="sq-tags">Full-stack prototype</span>
+    </div>
+    <div class="sq">
+      <span class="sq-status arcade">🕹 ARCADE CABINET</span>
+      <h3>⚡ Prototype Reel</h3>
+      <p>DoDay, ClimaGo, ShouldIGo, GrowMeAForest, TheCleaningApp - plus a shelf of mobile game experiments
+      (AlphaMerge, StayStill, One-Minute Challenge, Treasure Hunt). A habit of taking ideas from concept to
+      working product fast.</p>
+      <span class="sq-tags">Rapid prototyping · Flutter · Games</span>
+    </div>
+  </div>
+</section>
+
+<!-- HIRE / GAME MODES -->
+<section class="panel" id="hire">
+  <h2><span class="h2-icon">🎮</span> SELECT GAME MODE <span class="h2-sub">— how we can play</span></h2>
+  <div class="mode-grid">
+    <div class="mode">
+      <div class="mode-head">
+        <span class="mode-player">PLAYER 1</span>
+        <h3>Full-Time Campaign</h3>
+      </div>
+      <p class="mode-sub">Lead / Principal Engineer</p>
+      <ul>
+        <li>Own architecture and delivery for distributed backend platforms and external API estates.</li>
+        <li>Lead and grow teams - standards, mentoring, hiring, delivery cadence.</li>
+        <li>Hard migrations done well: serverless→K8s, platform cutovers, zero-disruption re-platforms.</li>
+        <li>Bring AI-accelerated engineering practice to the whole team, not just myself.</li>
+      </ul>
+      <a class="btn btn-primary" href="mailto:viveak.03@gmail.com?subject=Full-time%20role%20—%20via%20viveakv.dev">▶ START CAMPAIGN</a>
+    </div>
+    <div class="mode">
+      <div class="mode-head">
+        <span class="mode-player alt">PLAYER 2</span>
+        <h3>Co-op / Contract Mode</h3>
+      </div>
+      <p class="mode-sub">Part-time · Fractional · Contract</p>
+      <ul>
+        <li>Architecture reviews and integration strategy for external-facing APIs and webhooks.</li>
+        <li>Short, sharp engagements: design docs, platform audits, migration plans, proof-of-concepts.</li>
+        <li>Fractional tech-lead support for small teams that need senior direction, not a full-time hire.</li>
+        <li>End-to-end product builds - I ship my own products solo, I can ship yours too.</li>
+      </ul>
+      <a class="btn btn-primary" href="mailto:viveak.03@gmail.com?subject=Contract%20%2F%20fractional%20—%20via%20viveakv.dev">▶ JOIN CO-OP</a>
+    </div>
+  </div>
+  <div class="contact-btns">
+    <a class="btn" href="https://linkedin.com/in/viveakv" target="_blank" rel="noopener">in/ LinkedIn</a>
+    <a class="btn" href="cv.pdf" download="Viveak-Vadivelkarasan-CV.pdf">⬇ CV (PDF)</a>
+    <a class="btn" href="mailto:viveak.03@gmail.com">✉ viveak.03@gmail.com</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>© <span id="year"></span> Viveak Vadivelkarasan · viveakv.dev · Built with vanilla HTML/CSS/JS - no framework was harmed in the making of this site.</p>
+</footer>
+
+<div class="toasts" id="toasts" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
