@@ -1,5 +1,5 @@
 import { useEffect, useReducer, useRef, useState } from "react";
-import { Section } from "../components/Section";
+import { Exhibit } from "../components/Exhibit";
 
 type Breaker = "CLOSED" | "OPEN" | "HALF-OPEN";
 type Evt = { id: number; attempt: number };
@@ -189,14 +189,20 @@ export function Simulator() {
   }
 
   return (
-    <Section id="demo" no="02" title="Break something. It's fine.">
-      <p className="section-lede">
-        This is a working scale model of the webhook platform I run in production —{" "}
-        <strong>circuit breaker, exponential backoff, dead-letter queue</strong>. Send a burst, take
-        the client down mid-flight, and watch the system absorb it. The real one does this with a
-        million events a day.
-      </p>
-
+    <Exhibit
+      id="event-hub"
+      no="01"
+      title="The Event Hub"
+      story={
+        <>
+          The delivery backbone I designed for a travel platform's external APIs moves{" "}
+          <strong>~1M events a day</strong> to third-party clients — signed payloads, circuit
+          breakers, backoff, dead-letter queue. This is the working scale model.{" "}
+          <strong>Take the client down mid-burst. That's the fun part.</strong>
+        </>
+      }
+      footnote="in production since 2025 on AWS EventBridge + BullMQ/Redis — HMAC signing, per-subscription breakers, rate limits, Postgres-backed DLQ. Employer's name lives in the CV."
+    >
       <div className="sim card">
         <div className="sim-controls">
           <button className="btn btn-accent" onClick={fireEvent}>Send event</button>
@@ -242,13 +248,6 @@ export function Simulator() {
         </div>
       </div>
 
-      <p className="section-lede" style={{ marginTop: 20, fontSize: 14 }}>
-        The production version adds HMAC signing, per-subscription rate limits and full Datadog
-        tracing. This one is ~200 lines of React —{" "}
-        <a href="https://github.com/AadhiPixels/viveak-dev" target="_blank" rel="noopener">
-          read the source
-        </a>.
-      </p>
-    </Section>
+    </Exhibit>
   );
 }

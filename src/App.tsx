@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { ModeProvider } from "./mode";
 import { ToastProvider, useToast } from "./toast";
 import { useKonami } from "./hooks/useKonami";
@@ -6,8 +6,8 @@ import { Header } from "./components/Header";
 import { CommandPalette } from "./components/CommandPalette";
 import { Hero } from "./sections/Hero";
 import { Ticker } from "./sections/Ticker";
-import { Experience } from "./sections/Experience";
-import { Simulator } from "./sections/Simulator";
+import { Playground } from "./sections/Playground";
+import { Story } from "./sections/Story";
 import { Products } from "./sections/Products";
 import { Skills } from "./sections/Skills";
 import { Contact } from "./sections/Contact";
@@ -15,6 +15,14 @@ import { Contact } from "./sections/Contact";
 function Site() {
   const [paletteOpen, setPaletteOpen] = useState(false);
   const toast = useToast();
+
+  // React renders after the browser's native anchor pass, so honour #hash deep links ourselves.
+  useEffect(() => {
+    const id = location.hash.slice(1);
+    if (!id) return;
+    const t = setTimeout(() => document.getElementById(id)?.scrollIntoView(), 80);
+    return () => clearTimeout(t);
+  }, []);
 
   useKonami(
     useCallback(() => {
@@ -30,8 +38,8 @@ function Site() {
       <main>
         <Hero />
         <Ticker />
-        <Experience />
-        <Simulator />
+        <Playground />
+        <Story />
         <Products />
         <Skills />
         <Contact />

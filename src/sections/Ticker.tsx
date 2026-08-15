@@ -1,10 +1,10 @@
 import { useMode } from "../mode";
 
 const DAY_ITEMS = [
-  "~1M events/day", "circuit breakers that actually trip", "NestJS · TypeScript",
-  "AWS EventBridge → BullMQ → your endpoint", "Lambdas → EKS, no cold starts",
-  "outbox pattern", "idempotency keys", "Retry-After: 30", "ETag semantics",
-  "9 engineers, one standard", "Datadog or it didn't happen",
+  "~1M events/day", "circuit breakers that actually trip", "5 playable exhibits below",
+  "Lambdas → EKS, no cold starts", "EC2 → K8s for 300+ engineers",
+  "LEGO.com returns: −30% support contact", "AEM components across Europe",
+  "outbox pattern", "idempotency keys", "0 requests dropped", "Datadog or it didn't happen",
 ];
 
 const NIGHT_ITEMS = [

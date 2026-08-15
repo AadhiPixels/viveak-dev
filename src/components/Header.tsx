@@ -15,8 +15,8 @@ export function Header({ openPalette }: { openPalette: () => void }) {
       <div className="wrap">
         <a className="logo" href="#top" aria-label="Home">VV</a>
         <nav className="nav">
-          <a href="#experience">Day job</a>
-          <a href="#demo">Playground</a>
+          <a href="#playground">Playground</a>
+          <a href="#story">Story</a>
           <a href="#products">Night shift</a>
           <a href="#skills">Loadout</a>
           <a href="#contact">Hire</a>

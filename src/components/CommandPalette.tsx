@@ -46,8 +46,12 @@ export function CommandPalette({
   const cmds: Cmd[] = useMemo(
     () => [
       { icon: "🏠", label: "Top", run: () => go("top") },
-      { icon: "💼", label: "The day job — experience", run: () => go("experience") },
-      { icon: "💥", label: "Playground — break the webhook platform", run: () => go("demo") },
+      { icon: "📡", label: "Exhibit 01 — the Event Hub (break it)", run: () => go("event-hub") },
+      { icon: "⚙️", label: "Exhibit 02 — the Migration Machine", run: () => go("migrations") },
+      { icon: "🧱", label: "Exhibit 03 — the Returns Robot", run: () => go("returns") },
+      { icon: "🏭", label: "Exhibit 04 — the Component Factory", run: () => go("factory") },
+      { icon: "✅", label: "Exhibit 05 — the Coverage Cranker", run: () => go("coverage") },
+      { icon: "📖", label: "The story so far", run: () => go("story") },
       { icon: "🌙", label: "The night shift — AadhiPixels products", run: () => go("products") },
       { icon: "🎒", label: "Loadout — skills", run: () => go("skills") },
       { icon: "🤝", label: "Hire me", run: () => go("contact") },
