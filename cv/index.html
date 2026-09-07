@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <title>Viveak Vadivelkarasan CV</title>
+    <meta name="author" content="Viveak Vadivelkarasan" />
+    <meta
+      name="description"
+      content="CV: Tech Lead, Distributed Systems, External API Platforms, AWS & Kubernetes"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!--
+      Source of public/Viveak-Vadivelkarasan-CV.pdf. Build with `npm run cv:build`.
+      Rules: two pages, real text in a single column, no em or en dashes,
+      every figure traceable to the original CV. The current employer is not
+      named (Viveak's request, Sep 2026); earlier employers stay named.
+    -->
+    <header class="masthead">
+      <h1>Viveak Vadivelkarasan</h1>
+      <p class="title-line">
+        <span class="title-role">Tech Lead</span>
+        <span class="title-sep" aria-hidden="true"></span>
+        <span class="title-specialisms">Distributed Systems · External API Platforms · AWS &amp; Kubernetes</span>
+      </p>
+      <p class="contact">
+        <span>London, UK</span>
+        <span>viveak.03@gmail.com</span>
+        <span>07525 292257</span>
+        <span>linkedin.com/in/viveakv</span>
+        <span>viveakv.dev</span>
+      </p>
+    </header>
+
+    <section>
+      <h2>Executive Profile</h2>
+      <p class="lede">
+        Hands-on technical leader with 9+ years building distributed backend platforms and external
+        APIs. Tech Lead for External APIs on my latest project, leading 9 engineers across parallel
+        workstreams and owning architecture and engineering standards for a platform handling ~1M
+        events/day. Experienced in complex migrations, including serverless-to-Kubernetes re-platforms
+        and zero-disruption cutovers, and in shipping independent products from idea to production.
+      </p>
+    </section>
+
+    <section>
+      <h2>Selected Impact</h2>
+      <table class="impact">
+        <tbody>
+          <tr>
+            <th scope="row">~1M</th>
+            <td>events/day through the webhook delivery platform built on my latest project</td>
+          </tr>
+          <tr>
+            <th scope="row">300+</th>
+            <td>engineers impacted by an EC2-to-Kubernetes migration I led at Dyson</td>
+          </tr>
+          <tr>
+            <th scope="row">~30%</th>
+            <td>fewer customer-service contacts after automating self-returns on LEGO.com</td>
+          </tr>
+          <tr>
+            <th scope="row">0</th>
+            <td>customer-visible disruptions during LEGO's Salesforce Marketing Cloud migration</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Technical Skills</h2>
+      <dl class="skills">
+        <dt>Languages &amp; Backend</dt>
+        <dd>TypeScript&nbsp;· Node.js&nbsp;· NestJS&nbsp;· Java&nbsp;· Python&nbsp;· REST&nbsp;· OpenAPI</dd>
+        <dt>Distributed Systems</dt>
+        <dd>
+          Event-driven architecture&nbsp;· Kafka&nbsp;· EventBridge&nbsp;· Webhooks&nbsp;· Outbox pattern&nbsp;· Idempotency&nbsp;· Circuit breakers&nbsp;· Rate limiting&nbsp;· Dead-letter queues
+        </dd>
+        <dt>Cloud &amp; Platform</dt>
+        <dd>AWS (EKS, ECS, Lambda, SQS, S3, CloudWatch)&nbsp;· Kubernetes&nbsp;· Docker&nbsp;· Terraform&nbsp;· CI/CD</dd>
+        <dt>Data &amp; Messaging</dt>
+        <dd>PostgreSQL&nbsp;· Redis&nbsp;· BullMQ&nbsp;· Databricks</dd>
+        <dt>Security &amp; API Design</dt>
+        <dd>OAuth 2.0&nbsp;· OIDC&nbsp;· API authentication &amp; authorisation&nbsp;· HMAC signing&nbsp;· ETag / Retry-After</dd>
+        <dt>Observability</dt>
+        <dd>Datadog&nbsp;· CloudWatch&nbsp;· Correlation-ID tracing</dd>
+        <dt>Leadership &amp; Practice</dt>
+        <dd>
+          Architecture ownership&nbsp;· Technical strategy&nbsp;· Engineering standards&nbsp;· Stakeholder management&nbsp;· Mentoring
+        </dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>Professional Experience</h2>
+
+      <article class="role">
+        <header class="role-head">
+          <h3>
+            <span class="employer">Current employer (confidential)</span>
+            <span class="dot" aria-hidden="true">·</span>
+            <span class="position">Tech Lead, External APIs</span>
+          </h3>
+          <p class="when">Jul 2025 - Present · London</p>
+        </header>
+        <p class="role-summary">
+          Technical lead for a team of 9 engineers across multiple parallel workstreams, working closely
+          with product, delivery and the technical architect, building the external API platform behind
+          reservations, availability and pre-booking: the integration surface for 5 major third-party
+          clients, with more onboarding.
+        </p>
+        <ul>
+          <li>
+            Designed and built the event-driven webhook delivery platform behind every external client
+            integration: ~1M events/day on AWS EventBridge and BullMQ/Redis, with HMAC-signed payloads,
+            per-subscription circuit breakers, rate limiting, exponential-backoff retries and a
+            Postgres-backed dead-letter queue.
+          </li>
+          <li>
+            Re-platformed a high-volume data service from AWS Lambda to a long-running EKS service,
+            removing timeout ceilings and cold starts while adding back-pressure handling, resumability
+            and full observability.
+          </li>
+          <li>
+            Authored the platform's push-to-pull integration strategy (operation-status endpoints with
+            Retry-After and ETag semantics) and its four-phase rollout, cutting integration cost for
+            clients.
+          </li>
+          <li>Own the shared authentication and authorisation tooling used across the external APIs estate.</li>
+          <li>
+            Set the platform's engineering standards: outbox publishing, idempotent mutations,
+            correlation-ID tracing and Datadog observability.
+          </li>
+          <li>
+            Introduced team-wide use of AI coding agents and agentic workflows across design, delivery
+            and code review, raising throughput without lowering standards.
+          </li>
+        </ul>
+      </article>
+
+      <p class="running-head">Viveak Vadivelkarasan · Professional experience, continued</p>
+
+      <article class="role">
+        <header class="role-head">
+          <h3>
+            <span class="employer">Deloitte Digital</span>
+            <span class="dot" aria-hidden="true">·</span>
+            <span class="position">Manager, Technology Consulting</span>
+          </h3>
+          <p class="when">Jun 2018 - Jul 2025 · London</p>
+        </header>
+        <p class="role-summary">
+          Promoted through Engineer &rarr; Senior Engineer &rarr; Lead Engineer &rarr; Manager, leading
+          engineering on client programmes for LEGO, Dyson and UK Government.
+        </p>
+
+        <section class="engagement">
+          <header class="role-head">
+            <h4>
+              <span class="engagement-title">Technical Lead</span>
+              <span class="dot" aria-hidden="true">·</span>
+              <span class="client">LEGO Customer Data Platform</span>
+            </h4>
+            <p class="when">Jul 2024 - Jul 2025</p>
+          </header>
+          <ul>
+            <li>
+              Led the integration of Databricks as the Customer Data Platform for LEGO.com, centralising
+              user data to power key metrics, persona modelling and market segmentation.
+            </li>
+            <li>
+              Architected the AWS pipeline consolidating source streams into Salesforce CRM; recovered a
+              delayed initiative and brought delivery back on schedule.
+            </li>
+          </ul>
+        </section>
+
+        <section class="engagement">
+          <header class="role-head">
+            <h4>
+              <span class="engagement-title">Technical Lead Engineer</span>
+              <span class="dot" aria-hidden="true">·</span>
+              <span class="client">UK Government</span>
+            </h4>
+            <p class="when">Feb 2023 - Jul 2024</p>
+          </header>
+          <ul>
+            <li>
+              Introduced the client's first asynchronous service journey and provided the architecture
+              guidance that secured follow-on engagement scope.
+            </li>
+            <li>
+              Turned around an underperforming delivery team while directing MVP scope and roadmap: reset
+              the cadence, closed deadline gaps and raised throughput.
+            </li>
+          </ul>
+        </section>
+
+        <section class="engagement">
+          <header class="role-head">
+            <h4>
+              <span class="engagement-title">Lead Engineer</span>
+              <span class="dot" aria-hidden="true">·</span>
+              <span class="client">LEGO Salesforce Marketing Cloud Migration</span>
+            </h4>
+            <p class="when">Jun 2021 - Dec 2022</p>
+          </header>
+          <ul>
+            <li>
+              Migrated LEGO's communication channels from Oracle Crowdtwist to Salesforce Marketing Cloud
+              with a team of four engineers and zero customer-visible disruption.
+            </li>
+            <li>
+              Built the AWS integrations underpinning the scale and reliability of the new marketing
+              pipeline, and ran technical stakeholder sessions through cutover.
+            </li>
+          </ul>
+        </section>
+
+        <section class="engagement">
+          <header class="role-head">
+            <h4>
+              <span class="engagement-title">Full-Stack Developer</span>
+              <span class="dot" aria-hidden="true">·</span>
+              <span class="client">LEGO.com</span>
+            </h4>
+            <p class="when">Jun 2020 - Jun 2021</p>
+          </header>
+          <ul>
+            <li>
+              Designed and shipped the AWS-driven automated self-returns journey on LEGO.com, cutting
+              customer-service contact volume by ~30%.
+            </li>
+          </ul>
+        </section>
+
+        <section class="engagement">
+          <header class="role-head">
+            <h4>
+              <span class="engagement-title">Lead Engineer</span>
+              <span class="dot" aria-hidden="true">·</span>
+              <span class="client">Dyson</span>
+              <span class="note">(Frontend Engineer until Nov 2019)</span>
+            </h4>
+            <p class="when">Jun 2018 - May 2020</p>
+          </header>
+          <ul>
+            <li>
+              Led the EC2-to-Kubernetes migration on AWS for a 300+ engineer organisation (auto-scaling,
+              faster deploys, measurable cost reduction) and built automated UAT and performance
+              environments.
+            </li>
+            <li>Earlier, built reusable AEM components rolled out across Dyson's European e-commerce estate.</li>
+          </ul>
+        </section>
+      </article>
+    </section>
+
+    <section>
+      <h2>Earlier Experience</h2>
+      <ul class="earlier">
+        <li>
+          <b>Gentrack</b><span class="dot" aria-hidden="true">·</span><b>Software Engineer</b><span class="dot" aria-hidden="true">·</span><span class="year">2018</span><span class="dot" aria-hidden="true">·</span>Backend invoicing solutions in Java.
+        </li>
+        <li>
+          <b>Accenture</b><span class="dot" aria-hidden="true">·</span><b>Application Developer</b><span class="dot" aria-hidden="true">·</span><span class="year">2017 - 2018</span><span class="dot" aria-hidden="true">·</span>Raised HMRC automated test coverage from ~25% to 75%+.
+        </li>
+        <li>
+          <b>Tullett Prebon</b><span class="dot" aria-hidden="true">·</span><b>Software Engineer Intern</b><span class="dot" aria-hidden="true">·</span><span class="year">2016</span><span class="dot" aria-hidden="true">·</span>Market-data trading platform used during the EU referendum.
+        </li>
+        <li>
+          <b>Accenture</b><span class="dot" aria-hidden="true">·</span><b>Industrial Placement</b><span class="dot" aria-hidden="true">·</span><span class="year">2015 - 2016</span><span class="dot" aria-hidden="true">·</span>Overhauled automated test strategy and coverage.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Founder &amp; Product Engineer · AadhiPixels</h2>
+      <p class="role-summary">
+        Independent product studio where I identify product opportunities, then design, architect, build,
+        deploy and operate the software myself, alongside smaller experiments taken from concept to
+        working product.
+      </p>
+      <ul>
+        <li>
+          <b>TheCocoCard:</b> Digital loyalty platform for local businesses. Business back-office, consumer
+          PWA and Flutter app on Firebase backends, deployed on Vercel and Firebase with cross-app
+          Playwright E2E tests.
+        </li>
+        <li>
+          <b>Fixabee:</b> Local-services marketplace in Flutter and Firebase. Bookings, provider onboarding
+          with Stripe payouts, postcode-based discovery and referrals, shipped through full dev/test/prod
+          release environments.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Education &amp; Certification</h2>
+      <ul class="education">
+        <li>
+          <b>BSc (Hons) Computer Science</b><span class="dot" aria-hidden="true">·</span><b>City, University of London</b><span class="dot" aria-hidden="true">·</span><span class="year">2017</span>
+        </li>
+        <li><b>AWS Certified Solutions Architect</b></li>
+      </ul>
+    </section>
+  </body>
+</html>

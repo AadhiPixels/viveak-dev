@@ -1,0 +1,369 @@
+/*
+  Print stylesheet for the CV. Tuned for Chromium's PDF output at A4 and measured
+  against the previous edition of the PDF so the rhythm matches it line for line.
+  Palette: ink #111318, body #3a3f4b, muted #5f6470, faint #8f9092, rule #d9dce3,
+  accent #1f3fae. Prints legibly in black and white.
+*/
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("./fonts/inter-latin-400-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-display: block;
+  src: url("./fonts/inter-latin-500-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-display: block;
+  src: url("./fonts/inter-latin-600-normal.woff2") format("woff2");
+}
+
+@page {
+  size: A4;
+  margin: 13mm 16.6mm 16mm 16.9mm;
+}
+
+:root {
+  --ink: #111318;
+  --body: #3a3f4b;
+  --muted: #5f6470;
+  --faint: #8f9092;
+  --rule: #d9dce3;
+  --rule-strong: #111318;
+  --accent: #1f3fae;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  font-size: 9.4pt;
+  line-height: 13pt;
+  color: var(--body);
+  font-feature-settings: "cv11", "ss01";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+
+/* Screen preview only: show the page at its print width. */
+@media screen {
+  body {
+    width: 176.5mm;
+    margin: 13mm auto 16mm;
+  }
+}
+
+b,
+strong {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+p,
+ul,
+dl,
+table {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Masthead */
+
+.masthead {
+  padding-bottom: 10pt;
+  border-bottom: 1.4pt solid var(--rule-strong);
+}
+
+.masthead h1 {
+  margin: 0;
+  font-size: 23pt;
+  font-weight: 600;
+  line-height: 28pt;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+
+.title-line {
+  display: flex;
+  align-items: center;
+  gap: 6pt;
+  margin-top: 5pt;
+  font-size: 10.5pt;
+  font-weight: 500;
+  line-height: 14pt;
+  color: var(--accent);
+}
+
+.title-sep {
+  display: inline-block;
+  width: 0.7pt;
+  height: 1.1em;
+  background: #b8c2e6;
+}
+
+.contact {
+  margin-top: 5pt;
+  font-size: 9pt;
+  line-height: 13pt;
+  color: #4c4d51;
+}
+
+.contact span + span::before {
+  content: "·";
+  margin: 0 5.5pt;
+  color: var(--faint);
+}
+
+/* Sections */
+
+section {
+  margin-top: 11pt;
+}
+
+h2 {
+  margin: 0 0 8pt;
+  padding-bottom: 6pt;
+  border-bottom: 0.6pt solid var(--rule);
+  font-size: 8pt;
+  font-weight: 600;
+  line-height: 10pt;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  break-after: avoid;
+}
+
+.lede {
+  font-size: 9.75pt;
+  line-height: 14pt;
+  color: var(--body);
+}
+
+/* Selected impact */
+
+.impact {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.impact tr + tr th,
+.impact tr + tr td {
+  border-top: 0.6pt solid var(--rule);
+}
+
+.impact th,
+.impact td {
+  padding: 3.2pt 0;
+  vertical-align: baseline;
+  text-align: left;
+}
+
+.impact th {
+  width: 48pt;
+  padding-right: 7pt;
+  font-size: 13.5pt;
+  font-weight: 600;
+  line-height: 13pt;
+  text-align: right;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.impact td {
+  font-size: 9.3pt;
+  line-height: 13pt;
+  color: var(--body);
+}
+
+/* Skills */
+
+.skills {
+  display: grid;
+  grid-template-columns: 112pt 1fr;
+  column-gap: 0;
+  row-gap: 2.5pt;
+  font-size: 9pt;
+  line-height: 13.5pt;
+}
+
+.skills dt {
+  font-size: 8.6pt;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.skills dd {
+  margin: 0;
+  color: var(--body);
+}
+
+/* Experience */
+
+.role + .role {
+  margin-top: 14pt;
+}
+
+.role-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10pt;
+  break-after: avoid;
+}
+
+.role-head h3,
+.role-head h4 {
+  margin: 0;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.role-head h3 {
+  font-size: 11.2pt;
+  line-height: 15pt;
+}
+
+.role-head h4 {
+  font-size: 9.8pt;
+  line-height: 13pt;
+}
+
+.position {
+  font-size: 10.2pt;
+  font-weight: 500;
+  color: var(--body);
+}
+
+.client {
+  font-weight: 500;
+  color: var(--body);
+}
+
+.role-head .note {
+  font-weight: 400;
+  color: var(--faint);
+  margin-left: 2pt;
+}
+
+.dot {
+  margin: 0 1.5pt;
+  font-weight: 400;
+  color: var(--faint);
+}
+
+.when {
+  flex: none;
+  font-size: 8.8pt;
+  line-height: 13pt;
+  color: var(--faint);
+  white-space: nowrap;
+}
+
+.role-head h4 + .when {
+  font-size: 8.6pt;
+}
+
+.role-summary {
+  margin-top: 6pt;
+  color: var(--body);
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+.role ul,
+section > ul {
+  margin-top: 5pt;
+}
+
+.role li,
+section > ul li {
+  position: relative;
+  padding-left: 11pt;
+  break-inside: avoid;
+}
+
+.role li + li,
+section > ul li + li {
+  margin-top: 4pt;
+}
+
+.role li::before,
+section > ul:not(.earlier):not(.education) li::before {
+  content: "";
+  position: absolute;
+  left: 2.2pt;
+  top: 5.2pt;
+  width: 3pt;
+  height: 3pt;
+  border-radius: 50%;
+  background: #9aa0ad;
+}
+
+.engagement {
+  margin-top: 10pt;
+}
+
+.engagement ul {
+  margin-top: 3pt;
+}
+
+.running-head {
+  break-before: page;
+  margin: 0 0 9pt;
+  font-size: 7.6pt;
+  line-height: 11pt;
+  text-align: right;
+  color: var(--faint);
+}
+
+.running-head + .role {
+  margin-top: 0;
+}
+
+/* Earlier experience and education: one line each, no bullets */
+
+.earlier li,
+.education li {
+  padding-left: 0;
+  font-size: 8.9pt;
+  line-height: 13pt;
+}
+
+.earlier li + li,
+.education li + li {
+  margin-top: 2.5pt;
+}
+
+.earlier .year,
+.education .year {
+  color: var(--faint);
+}
+
+.earlier .dot,
+.education .dot {
+  margin: 0 4pt;
+}
